@@ -1,2 +1,8 @@
-# compiler-programs
-contains program of parsers
+#Left Recursion
+#Left Factoring
+#Lexical Analyser
+#First 
+#Follow
+#LL1
+#Other program
+#Calculator design using lex and yacc
