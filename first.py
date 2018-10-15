@@ -34,22 +34,16 @@ def left_recursion(grammar):
 def first(grammar,terminal):
 	for key in grammar.copy():
 		lis = []
-		print "key",key
 		for string in grammar.copy()[key]:
-			print "string",string
 			for key1 in grammar.copy():
-				print key1,"key1"
 				if key1 in string:
 					pos = find_substr(string,key1)
 					for i in range(len(grammar[key1])):
 						string1 = string[0:pos] + change_left(string[pos:pos+len(key1)],key1,grammar[key1][i]) + string[pos+len(key1):len(string)]
-						print "string1",string1
 				else:
 					string1 = string
 			lis.append(string1)
 		grammar.update({key:lis})
-	print grammar
-	print "---------------------------------------------"
 	first1 = {}
 	for key in grammar.copy():
 		firlis = []
